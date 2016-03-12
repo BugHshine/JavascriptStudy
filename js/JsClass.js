@@ -6,7 +6,9 @@ var  JS={
 JS.Class=function(classDefinition){
 	  
 	  function getBaseClass(){
-	  	
+	  	 if(typeof this["construt"]==="function"){
+	  	 	
+	  	 }
 	  }
 }
 
