@@ -3,7 +3,7 @@ var  JS={
 }
 
 
-JS.Class=function(){
+JS.Class=function(classDefinition){
 	
 }
 
