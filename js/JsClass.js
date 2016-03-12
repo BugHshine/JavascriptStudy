@@ -3,3 +3,7 @@ var  JS={
 }
 
 
+JS.Class=function(){
+	
+}
+
