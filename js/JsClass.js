@@ -4,6 +4,9 @@ var  JS={
 
 
 JS.Class=function(classDefinition){
-	
+	  
+	  function getBaseClass(){
+	  	
+	  }
 }
 
