@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSClass</title>
+		<script type="text/javascript" src="js/JsClass.js" ></script>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script>
+	var Animal=JS.Class({
+		 construct:function(name){
+		 	this.name=name;
+		 	console.log(this.name)
+		 },
+		 shout:function(s){
+		 	console.log(s)
+		 }
+	})
+	
+	var Drog=Animal.extend({
+		construct:function(name,age){
+			//console.log(this.name)
+			//调用父类的构造函数
+			this.parent.construct.apply(this,arguments);
+			this.age=age;
+		},
+		run:function(s){
+			console.log(s);
+		}
+	})
+	
+	var a=new Animal();
+	//a.construct("hah");
+	a.shout("animal");
+	console.log(Drog);
+	
+	
+	
+	var dog=new Drog("drog",4);
+	//console.log(dog.name);
+</script>
