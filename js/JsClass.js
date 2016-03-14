@@ -6,8 +6,8 @@ var  JS={
 JS.Class=function(classDefinition){
 	  
 	  function getBaseClass(){
-	  	 if(typeof this["construt"]==="function"){
-	  	 	
+	  	 if(typeof this["construt"]==="function"&&callBack===false){
+	  	 	  this["construct"].apply(this,arguments);
 	  	 }
 	  }
 }
