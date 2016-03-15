@@ -37,8 +37,27 @@
 	a.shout("animal");
 	console.log(Drog);
 	
-	
-	
 	var dog=new Drog("drog",4);
-	//console.log(dog.name);
+	console.log(dog.name);
+	
+	
+	var Statics=Drog.extend({
+		"statics":{
+			 "TYPE":"Statics"
+		},
+		construct:function(name,age){
+			//this.parent.construct.apply(this,arguments);
+			this.age=age;
+		},
+		run:function(s){
+			this.parent.run.apply(this,arguments);
+		}
+	})
+	
+	
+	console.log(Statics.TYPE);
+	var ss=new Statics("lihui",4);
+	ss.run("dog")
+	
+	
 </script>

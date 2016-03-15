@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSClass</title>
+		<script type="text/javascript" src="js/Class.js" ></script>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	var Person=Class.extend({
+		init:function(name){
+			this.name=name;
+			//console.log(this.name)
+		},
+		say:function(s){
+			this.s=s;
+			console.log(this.s)
+		}
+	})
+	
+	var p=new Person();
+	p.say("hello");
+	
+	var man=Person.extend({
+		init:function(name){
+			this._super.apply(this,arguments);
+			this.name=name;
+		},
+		say:function(s){
+			this._super.apply(this,arguments);
+		}
+
+	})
+	
+	var m=new man("lihui");
+	console.log(m.name);
+	
+	m.say("haha");
+	
+</script>
